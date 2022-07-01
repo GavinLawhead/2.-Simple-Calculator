@@ -6,7 +6,7 @@
 }
 
 .calculator-grid{
-    padding-left: 600px;
+    /* padding-left: 600px; */
     padding-top: 200px;
     display: grid;
     grid-template-columns: repeat(4,100px);
@@ -21,4 +21,7 @@
     grid-column: 1/ -1;
     background-color: black;
     opacity: 90%;
+}
+.currant-operand{
+    color: white;
 }
