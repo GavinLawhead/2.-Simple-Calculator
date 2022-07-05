@@ -4,7 +4,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
-    <script src="script.js" defer></script>
+    <script src="script.js" defer>
+      function textNumber() {
+        let textdoc = document.getElementById("1").value;
+        document.write(textdoc);
+      }
+    </script>
     <title>Calculator</title>
   </head>
   <body>
@@ -16,7 +21,15 @@
       <button data-all-clear class="span-two">AC</button>
       <button data-delete>DEL</button>
       <button data-operation>\</button>
-      <button data-number>1</button>
+      <button
+        id="1"
+        value="1"
+        class="number"
+        onclick="textNumber()"
+        data-number
+      >
+        1
+      </button>
       <button data-number>2</button>
       <button data-number>3</button>
       <button data-number>*</button>
