@@ -6,19 +6,22 @@
     <link href="style.css" rel="stylesheet" />
     <script>
       function textNumber(value) {
-        document.getElementById('current-operand').innerHTML += value; console.log(value);
-        }
-      function Calculate(){
-        let par = document.getElementById('current-operand').innerHTML
-        let calculated= eval(par)
-        document.getElementById('current-operand').innerHTML = calculated; console.log(calculated)
+        document.getElementById("current-operand").innerHTML += value;
+        console.log(value);
       }
-      function Clear(){
-        document.getElementById('current-operand').innerHTML = ""
+      function Calculate() {
+        let par = document.getElementById("current-operand").innerHTML;
+        let calculated = eval(par);
+        document.getElementById("current-operand").innerHTML = calculated;
+        console.log(calculated);
       }
-      function Delete(){
-        let currentnumbers = document.getElementById('current-operand')
-        currentnumbers.remove(currentnumbers.length - 1); console.log(currentnumbers.remove(currentnumbers.length - 1));
+      function Clear() {
+        document.getElementById("current-operand").innerHTML = "";
+      }
+      function Delete() {
+        let currentnumbers =
+          document.getElementById("current-operand").innerHTML;
+        currentnumbers.length - 1 == "";
       }
     </script>
     <title>Calculator</title>
@@ -27,14 +30,24 @@
     <div class="calculator-grid">
       <div class="output" disabled>
         <div data-previous-operand class="previous-operand"></div>
-        <div data-current-operand type="text" class="current-operand" id="current-operand"></div>
+        <div
+          data-current-operand
+          type="text"
+          class="current-operand"
+          id="current-operand"
+        ></div>
       </div>
       <button data-all-clear class="span-two" onclick="Clear()">AC</button>
       <button data-delete onclick="Delete()">DEL</button>
-      <button value="/"
-      type="btn"
-      class="operation"
-      onclick="textNumber('/')" data-operation>\</button>
+      <button
+        value="/"
+        type="btn"
+        class="operation"
+        onclick="textNumber('/')"
+        data-operation
+      >
+        \
+      </button>
       <button
         value="1"
         type="btn"
@@ -44,69 +57,123 @@
       >
         1
       </button>
-      <button  value="2"
-      type="btn"
-      class="number"
-      onclick="textNumber('2')"
-      data-number>2</button>
-      <button value="3"
-      type="btn"
-      class="number"
-      onclick="textNumber('3')"
-      data-number>3</button>
-      <button value="*"
-      type="btn"
-      class="number"
-      onclick="textNumber('*')"
-      data-number>*</button>
-      <button value="4"
-      type="btn"
-      class="number"
-      onclick="textNumber('4')"
-      data-number>4</button>
-      <button value="5"
-      type="btn"
-      class="number"
-      onclick="textNumber('5')"
-      data-number>5</button>
-      <button value="6"
-      type="btn"
-      class="number"
-      onclick="textNumber('6')"
-      data-number>6</button>
-      <button value="+"
-      type="btn"
-      class="operation"
-      onclick="textNumber('+')" data-operation>+</button>
-      <button value="7"
-      type="btn"
-      class="number"
-      onclick="textNumber('7')"
-      data-number>7</button>
-      <button value="8"
-      type="btn"
-      class="number"
-      onclick="textNumber('8')"
-      data-number>8</button>
-      <button value="9"
-      type="btn"
-      class="number"
-      onclick="textNumber('9')"
-      data-number>9</button>
-      <button value="-"
-      type="btn"
-      class="operation"
-      onclick="textNumber('-')" data-operation>-</button>
-      <button value="."
-      type="btn"
-      class="number"
-      onclick="textNumber('.')"
-      data-number>.</button>
-      <button value="0"
-      type="btn"
-      class="number"
-      onclick="textNumber('0')"
-      data-number>0</button>
+      <button
+        value="2"
+        type="btn"
+        class="number"
+        onclick="textNumber('2')"
+        data-number
+      >
+        2
+      </button>
+      <button
+        value="3"
+        type="btn"
+        class="number"
+        onclick="textNumber('3')"
+        data-number
+      >
+        3
+      </button>
+      <button
+        value="*"
+        type="btn"
+        class="number"
+        onclick="textNumber('*')"
+        data-number
+      >
+        *
+      </button>
+      <button
+        value="4"
+        type="btn"
+        class="number"
+        onclick="textNumber('4')"
+        data-number
+      >
+        4
+      </button>
+      <button
+        value="5"
+        type="btn"
+        class="number"
+        onclick="textNumber('5')"
+        data-number
+      >
+        5
+      </button>
+      <button
+        value="6"
+        type="btn"
+        class="number"
+        onclick="textNumber('6')"
+        data-number
+      >
+        6
+      </button>
+      <button
+        value="+"
+        type="btn"
+        class="operation"
+        onclick="textNumber('+')"
+        data-operation
+      >
+        +
+      </button>
+      <button
+        value="7"
+        type="btn"
+        class="number"
+        onclick="textNumber('7')"
+        data-number
+      >
+        7
+      </button>
+      <button
+        value="8"
+        type="btn"
+        class="number"
+        onclick="textNumber('8')"
+        data-number
+      >
+        8
+      </button>
+      <button
+        value="9"
+        type="btn"
+        class="number"
+        onclick="textNumber('9')"
+        data-number
+      >
+        9
+      </button>
+      <button
+        value="-"
+        type="btn"
+        class="operation"
+        onclick="textNumber('-')"
+        data-operation
+      >
+        -
+      </button>
+      <button
+        value="."
+        type="btn"
+        class="number"
+        onclick="textNumber('.')"
+        data-number
+      >
+        .
+      </button>
+      <button
+        value="0"
+        type="btn"
+        class="number"
+        onclick="textNumber('0')"
+        data-number
+      >
+        0
+      </button>
       <button data-equals class="span-two" onclick="Calculate()">=</button>
     </div>
   </body>
