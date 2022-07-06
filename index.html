@@ -4,19 +4,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
-    <script src="script.js" defer>
-      function textNumber() {
-        let textdoc = document.getElementById("1").value;
-        document.write(textdoc);
-      }
+    <script>
+      function textNumber(value) {
+        document.getElementById('current-operand').value += value;
+        }
     </script>
     <title>Calculator</title>
   </head>
   <body>
     <div class="calculator-grid">
       <div class="output">
-        <div data-previous-operand class="previous-operand"></div>
-        <div data-current-operand class="current-operand"></div>
+        <div data-previous-operand class="previous-operand"><a>345</a></div>
+        <div data-current-operand class="current-operand" id="current-operand"><a>123</a></div>
       </div>
       <button data-all-clear class="span-two">AC</button>
       <button data-delete>DEL</button>
@@ -24,8 +23,9 @@
       <button
         id="1"
         value="1"
+        type="btn"
         class="number"
-        onclick="textNumber()"
+        onclick="textNumber('1')"
         data-number
       >
         1
