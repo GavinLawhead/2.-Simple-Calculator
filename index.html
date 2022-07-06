@@ -6,7 +6,7 @@
     <link href="style.css" rel="stylesheet" />
     <script>
       function textNumber(value) {
-        document.getElementById('current-operand').value += value;
+        document.getElementById('current-operand').innerHTML += value; console.log(value);
         }
     </script>
     <title>Calculator</title>
@@ -14,14 +14,13 @@
   <body>
     <div class="calculator-grid">
       <div class="output">
-        <div data-previous-operand class="previous-operand"><a>345</a></div>
-        <div data-current-operand class="current-operand" id="current-operand"><a>123</a></div>
+        <div data-previous-operand class="previous-operand"></div>
+        <div data-current-operand type="text" class="current-operand" id="current-operand"></div>
       </div>
       <button data-all-clear class="span-two">AC</button>
       <button data-delete>DEL</button>
       <button data-operation>\</button>
       <button
-        id="1"
         value="1"
         type="btn"
         class="number"
@@ -30,19 +29,63 @@
       >
         1
       </button>
-      <button data-number>2</button>
-      <button data-number>3</button>
-      <button data-number>*</button>
-      <button data-number>4</button>
-      <button data-number>5</button>
-      <button data-number>6</button>
+      <button  value="2"
+      type="btn"
+      class="number"
+      onclick="textNumber('2')"
+      data-number>2</button>
+      <button value="3"
+      type="btn"
+      class="number"
+      onclick="textNumber('3')"
+      data-number>3</button>
+      <button value="*"
+      type="btn"
+      class="number"
+      onclick="textNumber('*')"
+      data-number>*</button>
+      <button value="4"
+      type="btn"
+      class="number"
+      onclick="textNumber('4')"
+      data-number>4</button>
+      <button value="5"
+      type="btn"
+      class="number"
+      onclick="textNumber('5')"
+      data-number>5</button>
+      <button value="6"
+      type="btn"
+      class="number"
+      onclick="textNumber('6')"
+      data-number>6</button>
       <button data-operation>+</button>
-      <button data-number>7</button>
-      <button data-number>8</button>
-      <button data-number>9</button>
+      <button value="7"
+      type="btn"
+      class="number"
+      onclick="textNumber('7')"
+      data-number>7</button>
+      <button value="8"
+      type="btn"
+      class="number"
+      onclick="textNumber('8')"
+      data-number>8</button>
+      <button value="9"
+      type="btn"
+      class="number"
+      onclick="textNumber('9')"
+      data-number>9</button>
       <button data-operation>-</button>
-      <button data-number>.</button>
-      <button data-number>0</button>
+      <button value="."
+      type="btn"
+      class="number"
+      onclick="textNumber('.')"
+      data-number>.</button>
+      <button value="0"
+      type="btn"
+      class="number"
+      onclick="textNumber('0')"
+      data-number>0</button>
       <button data-equals class="span-two">=</button>
     </div>
   </body>

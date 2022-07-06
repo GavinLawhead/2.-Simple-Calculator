@@ -10,7 +10,6 @@ a {
 .current-operand {
     text-decoration-color: aliceblue;
     font-size: 40px;
-    z-index: 2;
 }
 
 .previous-operand {
@@ -34,6 +33,10 @@ a {
 
 .output {
     grid-column: 1/ -1;
-    background-color: black;
-    /* opacity: 90%; */
+    /* background-color: black; */
+    border: solid black 3px;
+    overflow-wrap: break-word;
+    overflow: scroll;
+    z-index: 3;
+    opacity: 90%;
 }
