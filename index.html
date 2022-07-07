@@ -6,18 +6,17 @@
     <link href="style.css" rel="stylesheet" />
     <script>
       function clickonce() {
-        let display = document.getElementsByName("current-operand");
-        let decimalClicker = false;
-        document
-          .getElementsByClassName("decimal")
-          .addEventListener("click", function () {
-            if (display.indexOf(".") == -1) {
-              display += ".";
-            }
-          });
+        document.getElementById("current-operand").innerHTML === ".";
+        if (document.getElementById("current-operand") === "." + ".") {
+          input = "";
+        }
       }
+
       function textNumber(value) {
         document.getElementById("current-operand").innerHTML += value;
+        if (document.getElementById("current-operand") === "." + ".") {
+          return (document.getElementById("current-operand") = "")
+        }
         console.log(value);
       }
       function Calculate() {
@@ -168,6 +167,7 @@
         -
       </button>
       <button
+        id="decimal"
         value="."
         type="btn"
         class="number decimal"
