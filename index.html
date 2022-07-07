@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
     <script>
+      function clickonce() {
+        let display = document.getElementsByName("current-operand");
+        let decimalClicker = false;
+        document
+          .getElementsByClassName("decimal")
+          .addEventListener("click", function () {
+            if (display.indexOf(".") == -1) {
+              display += ".";
+            }
+          });
+      }
       function textNumber(value) {
         document.getElementById("current-operand").innerHTML += value;
         console.log(value);
@@ -29,7 +40,7 @@
   <body>
     <div class="calculator-grid">
       <div class="output" disabled>
-        <div data-previous-operand class="previous-operand"></div>
+        <!-- <div data-previous-operand class="previous-operand"></div> -->
         <div
           data-current-operand
           type="text"
@@ -37,12 +48,12 @@
           id="current-operand"
         ></div>
       </div>
-      <button data-all-clear class="span-two" onclick="Clear()">AC</button>
-      <button data-delete onclick="Delete()">DEL</button>
+      <button data-all-clear class="clear" onclick="Clear()">AC</button>
+      <!-- <button data-delete onclick="Delete()">DEL</button> -->
       <button
         value="/"
         type="btn"
-        class="operation"
+        class="operation divide"
         onclick="textNumber('/')"
         data-operation
       >
@@ -51,7 +62,7 @@
       <button
         value="1"
         type="btn"
-        class="number"
+        class="number one"
         onclick="textNumber('1')"
         data-number
       >
@@ -60,7 +71,7 @@
       <button
         value="2"
         type="btn"
-        class="number"
+        class="number one"
         onclick="textNumber('2')"
         data-number
       >
@@ -69,7 +80,7 @@
       <button
         value="3"
         type="btn"
-        class="number"
+        class="number three"
         onclick="textNumber('3')"
         data-number
       >
@@ -78,7 +89,7 @@
       <button
         value="*"
         type="btn"
-        class="number"
+        class="number times"
         onclick="textNumber('*')"
         data-number
       >
@@ -87,7 +98,7 @@
       <button
         value="4"
         type="btn"
-        class="number"
+        class="number four"
         onclick="textNumber('4')"
         data-number
       >
@@ -96,7 +107,7 @@
       <button
         value="5"
         type="btn"
-        class="number"
+        class="number five"
         onclick="textNumber('5')"
         data-number
       >
@@ -105,7 +116,7 @@
       <button
         value="6"
         type="btn"
-        class="number"
+        class="number six"
         onclick="textNumber('6')"
         data-number
       >
@@ -114,7 +125,7 @@
       <button
         value="+"
         type="btn"
-        class="operation"
+        class="operation plus"
         onclick="textNumber('+')"
         data-operation
       >
@@ -123,7 +134,7 @@
       <button
         value="7"
         type="btn"
-        class="number"
+        class="number seven"
         onclick="textNumber('7')"
         data-number
       >
@@ -132,7 +143,7 @@
       <button
         value="8"
         type="btn"
-        class="number"
+        class="number eight"
         onclick="textNumber('8')"
         data-number
       >
@@ -141,7 +152,7 @@
       <button
         value="9"
         type="btn"
-        class="number"
+        class="number nine"
         onclick="textNumber('9')"
         data-number
       >
@@ -150,7 +161,7 @@
       <button
         value="-"
         type="btn"
-        class="operation"
+        class="operation minus"
         onclick="textNumber('-')"
         data-operation
       >
@@ -159,7 +170,7 @@
       <button
         value="."
         type="btn"
-        class="number"
+        class="number decimal"
         onclick="textNumber('.')"
         data-number
       >
@@ -168,13 +179,13 @@
       <button
         value="0"
         type="btn"
-        class="number"
+        class="number zero"
         onclick="textNumber('0')"
         data-number
       >
         0
       </button>
-      <button data-equals class="span-two" onclick="Calculate()">=</button>
+      <button data-equals class="equals" onclick="Calculate()">=</button>
     </div>
   </body>
 </html>
