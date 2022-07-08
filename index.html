@@ -6,13 +6,26 @@
     <link href="style.css" rel="stylesheet" />
     <script>
       function textNumber(value) {
-        if (value == "." + ".") {
+        let operand = document.getElementById("current-operand").innerHTML;
+        let hasDecimal = operand.indexOf(".");
+        if (hasDecimal !== -1 && value === ".") {
           return alert("you cant do that jimbo");
         } else {
+          console.log(
+            typeof document.getElementById("current-operand").innerHTML
+          );
           return (document.getElementById("current-operand").innerHTML +=
             value);
         }
       }
+      //   if (value == "." + ".") {
+      //     return alert("you cant do that jimbo");
+      //   } else {
+      //     return (document.getElementById("current-operand").innerHTML +=
+      //       value);
+      //   }
+      // }
+      // THIS WAS MY VERSION, I HAD HELP WITH THE DECIMAL PART OF THIS FUNCTION
       console.log(document.getElementById("current-operand"));
 
       function Calculate() {
