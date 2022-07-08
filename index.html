@@ -4,46 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
-    <script>
-      function textNumber(value) {
-        let operand = document.getElementById("current-operand").innerHTML;
-        let hasDecimal = operand.indexOf(".");
-        if (hasDecimal !== -1 && value === ".") {
-          return alert("you cant do that jimbo");
-        } else {
-          console.log(
-            typeof document.getElementById("current-operand").innerHTML
-          );
-          return (document.getElementById("current-operand").innerHTML +=
-            value);
-        }
-      }
-      //   if (value == "." + ".") {
-      //     return alert("you cant do that jimbo");
-      //   } else {
-      //     return (document.getElementById("current-operand").innerHTML +=
-      //       value);
-      //   }
-      // }
-      // THIS WAS MY VERSION, I HAD HELP WITH THE DECIMAL PART OF THIS FUNCTION
-      console.log(document.getElementById("current-operand"));
 
-      function Calculate() {
-        let par = document.getElementById("current-operand").innerHTML;
-        let calculated = eval(par);
-        document.getElementById("current-operand").innerHTML =
-          Math.round(calculated * 1000) / 1000;
-        console.log(calculated);
-      }
-      function Clear() {
-        document.getElementById("current-operand").innerHTML = "";
-      }
-      function Delete() {
-        let currentnumbers =
-          document.getElementById("current-operand").innerHTML;
-        currentnumbers.length - 1 == "";
-      }
-    </script>
     <title>Calculator</title>
   </head>
   <body>
@@ -57,7 +18,6 @@
         ></div>
       </div>
       <button data-all-clear class="clear" onclick="Clear()">AC</button>
-      <!-- <button data-delete onclick="Delete()">DEL</button> -->
       <button
         value="/"
         type="btn"
@@ -194,7 +154,10 @@
       >
         0
       </button>
-      <button data-equals class="equals" onclick="Calculate()">=</button>
+      <button data-equals value="=" class="equals" onclick="Calculate()">
+        =
+      </button>
     </div>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

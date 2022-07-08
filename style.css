@@ -3,20 +3,19 @@
     font-size: large;
     background-color: rgb(0, 162, 255);
 }
-
 a {
     color: white;
 }
 button{
     background-color: rgb(116, 160, 184);
-
+}
+button:active{
+background-color: rgb(153, 193, 245);
 }
 .current-operand {
     text-decoration-color: aliceblue;
     font-size: 40px;
-    
 }
-
 .previous-operand {
     text-decoration-color: aliceblue;
     font-size: 40px;
@@ -28,11 +27,8 @@ button{
     max-width: inherit;
     box-sizing:border-box;
     padding: 20px;
-
 }
-
 .calculator-grid {
-    /* padding-left: 600px; */
     padding-top: 200px;
     display: grid;
     grid-template-columns: repeat(4, 100px);
@@ -43,23 +39,19 @@ button{
     padding-left: 37.98%;
     
 }
-
 .output {
     grid-column: 1/ -1;
-    /* background-color: black; */
     border-radius: 25px 25px 0px 0px;
     max-width:100%;
     border: solid black 3px;
     overflow-wrap: break-word;
     overflow: scroll;
-    
     z-index: 3;
     opacity: 90%;
     background-color: rgb(241, 250, 255);
 }
 .clear{
     background-color: rgb(94, 96, 248);
-
 }
 .zero {
     grid-row-start: 6;
@@ -67,11 +59,9 @@ button{
     grid-column-start: 1;
     grid-column-end: 1;
     border-radius:  0px 0px 0px 25px;
-
   }
   .divide{
     background-color: rgb(129, 188, 219);
-
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 2;
@@ -79,7 +69,6 @@ button{
   }
   .times{
     background-color: rgb(129, 188, 219);
-
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 4;
@@ -87,7 +76,6 @@ button{
   }
   .minus{
     background-color: rgb(129, 188, 219);
-
     grid-row-start: 3;
     grid-row-end: 3;
     grid-column-start: 4;
@@ -95,7 +83,6 @@ button{
   }
   .plus{
     background-color: rgb(129, 188, 219);
-
     grid-row-start: 4;
     grid-row-end: 6;
     grid-column-start: 4;
@@ -104,35 +91,15 @@ button{
   .equals{
     background-color: rgb(60, 152, 201);
     border-radius:  0px 0px 25px 0px;
-
     grid-row-start: 6;
     grid-row-end: 6;
     grid-column-start: 3;
     grid-column-end: 5;
   }
-  /* .container {
-    margin-top: 50px;
-    display: block;
-    height: 200px;
-    width: 300px;
-    overflow: scroll;
-    border: 1px solid #000
-} */
-
-/* .content {
-    height: 1000px;
-    min-width: 500px;
-    padding: 5px;
-} */
-
 
 ::-webkit-scrollbar {
-    /* // Width of vertical scroll bar */
     width: 8px;
-
-    /* // Height of horizontal scroll bar */
     height: 10px;
-
   }
   ::-webkit-scrollbar-thumb {
     border-radius: 100px;
