@@ -18,7 +18,8 @@
       function Calculate() {
         let par = document.getElementById("current-operand").innerHTML;
         let calculated = eval(par);
-        document.getElementById("current-operand").innerHTML = calculated;
+        document.getElementById("current-operand").innerHTML =
+          Math.round(calculated * 1000) / 1000;
         console.log(calculated);
       }
       function Clear() {
