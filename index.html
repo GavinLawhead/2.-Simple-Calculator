@@ -5,20 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
     <script>
-      function clickonce() {
-        document.getElementById("current-operand").innerHTML === ".";
-        if (document.getElementById("current-operand") === "." + ".") {
-          input = "";
-        }
-      }
-
       function textNumber(value) {
-        document.getElementById("current-operand").innerHTML += value;
-        if (document.getElementById("current-operand") === "." + ".") {
-          return (document.getElementById("current-operand") = "")
+        if (value == "." + ".") {
+          return alert("you cant do that jimbo");
+        } else {
+          return (document.getElementById("current-operand").innerHTML +=
+            value);
         }
-        console.log(value);
       }
+      console.log(document.getElementById("current-operand"));
+
       function Calculate() {
         let par = document.getElementById("current-operand").innerHTML;
         let calculated = eval(par);
@@ -39,7 +35,6 @@
   <body>
     <div class="calculator-grid">
       <div class="output" disabled>
-        <!-- <div data-previous-operand class="previous-operand"></div> -->
         <div
           data-current-operand
           type="text"
